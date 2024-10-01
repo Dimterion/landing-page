@@ -1,5 +1,11 @@
+import Header from "./components/Header";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <main className="overflow-hidden">
+      <Header />
+    </main>
+  );
 };
 
 export default App;
