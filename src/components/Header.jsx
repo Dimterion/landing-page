@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
 import headerLogo from "../assets/header/header_logo.png";
+import menuBtn from "../assets/header/menu_btn.svg";
+import menuBtnClose from "../assets/header/menu_btn_close.svg";
 
 const NavLink = ({ title }) => (
   <LinkScroll
@@ -12,6 +15,8 @@ const NavLink = ({ title }) => (
 );
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="fixed left-0 top-0 z-50 w-full py-10">
       <div className="container flex h-14 items-center max-lg:px-5">
@@ -46,6 +51,16 @@ const Header = () => {
             </nav>
           </div>
         </div>
+        <button
+          className="z-2 flex size-10 items-center justify-center rounded-full border-2 border-s4/25 lg:hidden"
+          onClick={() => setIsOpen((prevState) => !prevState)}
+        >
+          <img
+            src={isOpen ? menuBtnClose : menuBtn}
+            alt="Menu button icon"
+            className="size-1/2 object-contain"
+          />
+        </button>
       </div>
     </header>
   );
