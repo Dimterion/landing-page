@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import clsx from "clsx";
 import { Link as LinkScroll } from "react-scroll";
 import headerLogo from "../assets/header/header_logo.png";
 import menuBtn from "../assets/header/menu_btn.svg";
@@ -23,7 +24,12 @@ const Header = () => {
         <a className="z-2 flex-1 cursor-pointer lg:hidden">
           <img src={headerLogo} width={115} height={55} alt="Header logo" />
         </a>
-        <div className="w-full max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0">
+        <div
+          className={clsx(
+            "w-full max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0",
+            isOpen ? "max-lg:opacity-100" : "max-lg:pointer-events-none",
+          )}
+        >
           <div className="sidebar-before w-full max-lg:relative max-lg:flex max-lg:min-h-screen max-lg:flex-col max-lg:overflow-hidden max-lg:p-6 max-md:px-4">
             <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
               <ul className="flex max-lg:block max-lg:px-12">
@@ -33,7 +39,15 @@ const Header = () => {
                   <NavLink title="pricing" />
                 </li>
                 <li className="nav-logo">
-                  <LinkScroll to="hero">
+                  <LinkScroll
+                    to="hero"
+                    offset={-100}
+                    spy
+                    smooth
+                    className={clsx(
+                      "cursor-pointer transition-transform duration-500 max-lg:hidden",
+                    )}
+                  >
                     <img
                       src={headerLogo}
                       width={160}
@@ -49,6 +63,7 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
+            <div></div>
           </div>
         </div>
         <button
