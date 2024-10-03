@@ -4,7 +4,7 @@ import heroBtn from "../assets/hero/hero_btn.svg";
 
 const Hero = () => {
   return (
-    <section className="relative border-2 border-amber-400 pb-40 pt-60 max-lg:pb-36 max-lg:pt-52 max-md:pb-32 max-md:pt-36">
+    <section className="relative pb-40 pt-60 max-lg:pb-36 max-lg:pt-52 max-md:pb-32 max-md:pt-36">
       <Element name="hero">
         <div className="container">
           <div className="relative z-2 max-w-512 max-lg:max-w-388">
@@ -17,7 +17,7 @@ const Hero = () => {
               aspernatur?
             </p>
             <LinkScroll to="features" offset={-100} spy smooth>
-              <Button icon={heroBtn}>Button</Button>
+              <Button icon={heroBtn}>Lorem ipsum</Button>
             </LinkScroll>
           </div>
         </div>

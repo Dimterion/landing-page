@@ -1,11 +1,21 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
+import Marker from "./Marker";
 
-const Button = ({ icon, children, href, containerClassName, onClick }) => {
+const Button = ({
+  icon,
+  children,
+  href,
+  containerClassName,
+  onClick,
+  markerFill,
+}) => {
   const Inner = () => (
     <>
-      <span>
-        <span>Marker</span>
+      <span className="g4 inner-before relative flex min-h-[60px] items-center overflow-hidden rounded-2xl px-4 group-hover:before:opacity-100">
+        <span className="absolute left-[-1px]">
+          <Marker markerFill={markerFill} />
+        </span>
         {icon && (
           <img
             src={icon}
@@ -13,7 +23,9 @@ const Button = ({ icon, children, href, containerClassName, onClick }) => {
             className="z-10 mr-5 size-10 object-contain"
           />
         )}
-        <span>{children}</span>
+        <span className="base-bold relative z-2 font-poppins uppercase text-p1">
+          {children}
+        </span>
       </span>
     </>
   );
@@ -44,6 +56,7 @@ Button.propTypes = {
   href: PropTypes.string,
   containerClassName: PropTypes.string,
   onClick: PropTypes.string,
+  markerFill: PropTypes.string,
 };
 
 export default Button;
