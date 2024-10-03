@@ -1,6 +1,7 @@
 import { Element, Link as LinkScroll } from "react-scroll";
 import Button from "./Button";
 import heroBtn from "../assets/hero/hero_btn.svg";
+import heroImg from "../assets/hero/hero_img.png";
 
 const Hero = () => {
   return (
@@ -19,6 +20,13 @@ const Hero = () => {
             <LinkScroll to="features" offset={-100} spy smooth>
               <Button icon={heroBtn}>Lorem ipsum</Button>
             </LinkScroll>
+          </div>
+          <div className="hero-img_res pointer-events-none absolute -top-32 left-[calc(50%-340px)] w-[1230px]">
+            <img
+              src={heroImg}
+              className="size-1230 opacity-10 max-lg:h-auto"
+              alt="Hero section image"
+            />
           </div>
         </div>
       </Element>
