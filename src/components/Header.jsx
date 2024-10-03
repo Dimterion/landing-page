@@ -5,6 +5,8 @@ import { Link as LinkScroll } from "react-scroll";
 import headerLogo from "../assets/header/header_logo.png";
 import menuBtn from "../assets/header/menu_btn.svg";
 import menuBtnClose from "../assets/header/menu_btn_close.svg";
+import bgOutlines from "../assets/header/bg_outlines.svg";
+import bgOutlinesFill from "../assets/header/bg_outlines_fill.png";
 
 const NavLink = ({ title }) => (
   <LinkScroll
@@ -63,7 +65,22 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
-            <div></div>
+            <div className="absolute left-0 top-1/2 block h-[380px] w-[960px] -translate-y-1/2 translate-x-[-290px] rotate-90 lg:hidden">
+              <img
+                src={bgOutlines}
+                width={960}
+                height={380}
+                alt="Background outline"
+                className="relative z-2"
+              />
+              <img
+                src={bgOutlinesFill}
+                width={960}
+                height={380}
+                alt="Background outline"
+                className="absolute inset-0 opacity-5 mix-blend-soft-light"
+              />
+            </div>
           </div>
         </div>
         <button
