@@ -1,4 +1,6 @@
 import { Element, Link as LinkScroll } from "react-scroll";
+import Button from "./Button";
+import heroBtn from "../assets/hero/hero_btn.svg";
 
 const Hero = () => {
   return (
@@ -15,7 +17,7 @@ const Hero = () => {
               aspernatur?
             </p>
             <LinkScroll to="features" offset={-100} spy smooth>
-              Scroll
+              <Button icon={heroBtn}>Button</Button>
             </LinkScroll>
           </div>
         </div>
