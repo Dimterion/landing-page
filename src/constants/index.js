@@ -1,5 +1,6 @@
 import feature1 from "../assets/features/feature_1.png";
 import feature2 from "../assets/features/feature_2.png";
+import featuresBtn from "../assets/features/features_btn.svg";
 
 export const features = [
   {
@@ -9,6 +10,7 @@ export const features = [
     title: "FEATURE 1",
     text: "LOREM 1",
     button: {
+      icon: featuresBtn,
       title: "Lorem ipsum",
     },
   },
@@ -19,6 +21,7 @@ export const features = [
     title: "FEATURE 2",
     text: "LOREM 2",
     button: {
+      icon: featuresBtn,
       title: "Lorem ipsum",
     },
   },
