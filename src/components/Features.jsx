@@ -1,5 +1,5 @@
 import { Element } from "react-scroll";
-import { features } from "../constants";
+import { details, features } from "../constants";
 import Button from "./Button";
 
 const Features = () => {
@@ -31,6 +31,21 @@ const Features = () => {
                 <Button icon={button.icon}>{button.title}</Button>
               </div>
             ))}
+            <ul className="relative flex flex-grow justify-around rounded-7xl border-2 border-s3 px-[5%] max-md:hidden">
+              <div className="absolute left-0 right-0 top-[38%] z-10 h-[1px] w-full bg-s3/20" />
+              {details.map(({ id, icon, title }) => (
+                <li key={id} className="relative px-4 pb-14 pt-16">
+                  <div className="absolute bottom-0 left-1/2 top-0 z-10 w-[1px] bg-s3/20" />
+                  <div className="mx-auto mb-3 flex size-20 items-center justify-center rounded-full border-2 border-s2 shadow-500 transition-all duration-500 hover:border-s4">
+                    <img
+                      src={icon}
+                      alt={title}
+                      className="z-20 size-17/20 object-contain"
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </Element>
