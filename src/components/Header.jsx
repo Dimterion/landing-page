@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { Link as LinkScroll } from "react-scroll";
 import headerLogo from "../assets/header/header_logo.png";
@@ -18,10 +18,28 @@ const NavLink = ({ title }) => (
 );
 
 const Header = () => {
+  const [hasScrolled, setHasScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 32);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll());
+    };
+  }, []);
+
   return (
-    <header className="fixed left-0 top-0 z-50 w-full py-10">
+    <header
+      className={clsx(
+        "fixed left-0 top-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
+        hasScrolled && "bg-black-100 py-2 backdrop-blur-[8px]",
+      )}
+    >
       <div className="container flex h-14 items-center max-lg:px-5">
         <a className="z-2 flex-1 cursor-pointer lg:hidden">
           <img src={headerLogo} width={115} height={55} alt="Header logo" />
@@ -43,7 +61,7 @@ const Header = () => {
                 <li className="nav-logo">
                   <LinkScroll
                     to="hero"
-                    offset={-100}
+                    offset={-250}
                     spy
                     smooth
                     className={clsx(
