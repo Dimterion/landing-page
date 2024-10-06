@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Element } from "react-scroll";
 import bgOutlines from "../assets/general/bg_outlines.svg";
 import bgOutlinesFill from "../assets/general/bg_outlines_fill.png";
+import { plans } from "../constants";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -51,6 +52,33 @@ const Pricing = () => {
                 className="absolute inset-0 opacity-5 mix-blend-soft-light"
               />
             </div>
+          </div>
+          <div className="scroll-hide relative z-2 -mt-12 flex items-start max-xl:gap-5 max-xl:overflow-auto max-xl:pt-6">
+            {plans.map((plan, index) => (
+              <div
+                key={plan.id}
+                className="pricing-plan_first pricing-plan_last pricing-plan_odd pricing-plan_even relative border-2 p-7 max-xl:min-w-80 max-lg:rounded-3xl xl:w-[calc(33.33%+2px)]"
+              >
+                {index === 1 && (
+                  <div className="g4 absolute left-0 top-0 z-1 h-330 rounded-tl-3xl rounded-tr-3xl" />
+                )}
+                <div
+                  className={clsx(
+                    "absolute left-0 right-0 z-2 flex items-center justify-center",
+                    index === 1 ? "-top-6" : "-top-6 xl:-top-11",
+                  )}
+                >
+                  <img
+                    src={plan.logo}
+                    alt={plan.title}
+                    className={clsx(
+                      "object-contain drop-shadow-2xl",
+                      index === 1 ? "size-[120px]" : "size-[88px]",
+                    )}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </Element>
