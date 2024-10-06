@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { useState } from "react";
 import { Element } from "react-scroll";
+import bgOutlines from "../assets/general/bg_outlines.svg";
+import bgOutlinesFill from "../assets/general/bg_outlines_fill.png";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -31,6 +33,22 @@ const Pricing = () => {
                   "g4 pricing-head_btn_befor absolute left-2 top-2 h-[calc(100%-16px)] w-[calc(50%-8px)] overflow-hidden rounded-14 shadow-400 transition-transform duration-500 before:h-100",
                   !monthly && "translate-x-full",
                 )}
+              />
+            </div>
+            <div className="pricing-bg">
+              <img
+                src={bgOutlines}
+                width={960}
+                height={380}
+                alt="Background outline"
+                className="relative z-2"
+              />
+              <img
+                src={bgOutlinesFill}
+                width={960}
+                height={380}
+                alt="Background outline"
+                className="absolute inset-0 opacity-5 mix-blend-soft-light"
               />
             </div>
           </div>

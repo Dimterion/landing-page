@@ -5,8 +5,8 @@ import { Link as LinkScroll } from "react-scroll";
 import headerLogo from "../assets/header/header_logo.png";
 import menuBtn from "../assets/header/menu_btn.svg";
 import menuBtnClose from "../assets/header/menu_btn_close.svg";
-import bgOutlines from "../assets/header/bg_outlines.svg";
-import bgOutlinesFill from "../assets/header/bg_outlines_fill.png";
+import bgOutlines from "../assets/general/bg_outlines.svg";
+import bgOutlinesFill from "../assets/general/bg_outlines_fill.png";
 
 const Header = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
