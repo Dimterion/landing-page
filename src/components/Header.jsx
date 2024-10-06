@@ -8,15 +8,6 @@ import menuBtnClose from "../assets/header/menu_btn_close.svg";
 import bgOutlines from "../assets/header/bg_outlines.svg";
 import bgOutlinesFill from "../assets/header/bg_outlines_fill.png";
 
-const NavLink = ({ title }) => (
-  <LinkScroll
-    to={title}
-    className="base-bold max-lg:h5 cursor-pointer uppercase text-p4 transition-colors duration-500 hover:text-p1 max-lg:my-4"
-  >
-    {title}
-  </LinkScroll>
-);
-
 const Header = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +23,24 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll());
     };
   }, []);
+
+  const NavLink = ({ title }) => (
+    <LinkScroll
+      onClick={() => setIsOpen(false)}
+      to={title}
+      offset={-100}
+      spy
+      smooth
+      activeClass="nav-active"
+      className="base-bold max-lg:h5 cursor-pointer uppercase text-p4 transition-colors duration-500 hover:text-p1 max-lg:my-4"
+    >
+      {title}
+    </LinkScroll>
+  );
+
+  NavLink.propTypes = {
+    title: PropTypes.string,
+  };
 
   return (
     <header
@@ -114,10 +123,6 @@ const Header = () => {
       </div>
     </header>
   );
-};
-
-NavLink.propTypes = {
-  title: PropTypes.string,
 };
 
 export default Header;
