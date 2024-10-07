@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import CountUp from "react-countup";
 import { useState } from "react";
 import { Element } from "react-scroll";
 import bgOutlines from "../assets/general/bg_outlines.svg";
@@ -98,7 +99,17 @@ const Pricing = () => {
                         index === 1 ? "text-p3" : "text-p4",
                       )}
                     >
-                      $ Amount
+                      ${" "}
+                      <CountUp
+                        start={plan.priceMonthly}
+                        end={monthly ? plan.priceMonthly : plan.priceYearly}
+                        duration={0.4}
+                        useEasing={false}
+                        preserveValue
+                      />
+                    </div>
+                    <div className="small-1 relative top-3 ml-1 uppercase">
+                      / month
                     </div>
                   </div>
                 </div>
