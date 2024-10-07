@@ -77,6 +77,31 @@ const Pricing = () => {
                     )}
                   />
                 </div>
+                <div
+                  className={clsx(
+                    "relative flex flex-col items-center",
+                    index === 1 ? "pt-24" : "pt-12",
+                  )}
+                >
+                  <div
+                    className={clsx(
+                      "small-2 relative z-2 mx-auto mb-6 rounded-20 border-2 px-4 py-1.5 uppercase",
+                      index === 1 ? "border-p3 text-p3" : "border-p1 text-p1",
+                    )}
+                  >
+                    {plan.title}
+                  </div>
+                  <div className="relative z-2 flex items-center justify-center">
+                    <div
+                      className={clsx(
+                        "h-num flex items-start",
+                        index === 1 ? "text-p3" : "text-p4",
+                      )}
+                    >
+                      $ Amount
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
