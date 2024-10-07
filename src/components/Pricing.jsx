@@ -6,6 +6,7 @@ import bgOutlines from "../assets/general/bg_outlines.svg";
 import bgOutlinesFill from "../assets/general/bg_outlines_fill.png";
 import { plans } from "../constants";
 import checkIcon from "../assets/general/check_icon.png";
+import Button from "../components/Button";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -137,6 +138,14 @@ const Pricing = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-10 flex w-full justify-center">
+                  <Button icon={plan.icon}>Lorem Ipsum</Button>
+                </div>
+                {index === 1 && (
+                  <p className="small-compact mt-9 text-center text-p3 before:mx-2.5 before:content-['-'] after:mx-2.5 after:content-['-']">
+                    Lorem ipsum dolor
+                  </p>
+                )}
               </div>
             ))}
           </div>
