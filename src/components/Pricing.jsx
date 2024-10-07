@@ -5,6 +5,7 @@ import { Element } from "react-scroll";
 import bgOutlines from "../assets/general/bg_outlines.svg";
 import bgOutlinesFill from "../assets/general/bg_outlines_fill.png";
 import { plans } from "../constants";
+import checkIcon from "../assets/general/check_icon.png";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -113,6 +114,29 @@ const Pricing = () => {
                     </div>
                   </div>
                 </div>
+                <div
+                  className={clsx(
+                    "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4",
+                    index === 1 && "border-b",
+                  )}
+                >
+                  {plan.caption}
+                </div>
+                <ul className="mx-auto space-y-4 xl:px-7">
+                  {plan.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="relative flex items-center gap-5"
+                    >
+                      <img
+                        src={checkIcon}
+                        alt="Check icon"
+                        className="size-10 object-contain"
+                      />
+                      <p className="flex-1">{feature}</p>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
