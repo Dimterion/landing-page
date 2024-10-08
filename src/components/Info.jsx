@@ -1,7 +1,10 @@
 import { Element } from "react-scroll";
 import infoLogo from "../assets/info/info_logo.svg";
+import { info } from "../constants/index";
 
 const Info = () => {
+  const halfLength = Math.floor(info.length / 2);
+
   return (
     <section>
       <Element name="info" className="relative">
@@ -24,6 +27,11 @@ const Info = () => {
                 alt="Info section logo"
                 className="size-1/2"
               />
+            </div>
+            <div className="relative flex-1 pt-24">
+              {info.slice(0, halfLength).map((infoItem) => (
+                <div key={infoItem.id}>{infoItem.question}</div>
+              ))}
             </div>
           </div>
         </div>

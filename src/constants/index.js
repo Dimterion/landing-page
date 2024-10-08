@@ -108,3 +108,65 @@ export const plans = [
     logo: plan3,
   },
 ];
+
+export const info = [
+  {
+    id: "0",
+    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    answer: "",
+  },
+  {
+    id: "1",
+    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    answer:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+  {
+    id: "2",
+    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    answer:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+  {
+    id: "3",
+    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    answer:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+  {
+    id: "4",
+    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    answer:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+  {
+    id: "5",
+    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    answer:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+  {
+    id: "6",
+    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    answer:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+  {
+    id: "7",
+    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    answer:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+  {
+    id: "8",
+    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    answer:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+  {
+    id: "9",
+    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    answer:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+];
