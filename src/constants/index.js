@@ -12,6 +12,7 @@ import pricingIcon3 from "../assets/pricing/pricing_icon_3.svg";
 import plan1 from "../assets/pricing/plan_1.png";
 import plan2 from "../assets/pricing/plan_2.png";
 import plan3 from "../assets/pricing/plan_3.png";
+import testimonialsImg from "../assets/testimonials/testimonials_img.png";
 
 export const features = [
   {
@@ -167,6 +168,54 @@ export const info = [
     id: "9",
     question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
     answer:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+];
+
+export const testimonials = [
+  {
+    id: "0",
+    name: "Lorem Ipsum",
+    role: "Lorem ipsum, dolor",
+    avatarUrl: testimonialsImg,
+    comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "1",
+    name: "Lorem Ipsum",
+    role: "Lorem ipsum, dolor",
+    avatarUrl: testimonialsImg,
+    comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "2",
+    name: "Lorem Ipsum",
+    role: "Lorem ipsum, dolor",
+    avatarUrl: testimonialsImg,
+    comment:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+  {
+    id: "3",
+    name: "Lorem Ipsum",
+    role: "Lorem ipsum, dolor",
+    avatarUrl: testimonialsImg,
+    comment:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+  {
+    id: "4",
+    name: "Lorem Ipsum",
+    role: "Lorem ipsum, dolor",
+    avatarUrl: testimonialsImg,
+    comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "5",
+    name: "Lorem Ipsum",
+    role: "Lorem ipsum, dolor",
+    avatarUrl: testimonialsImg,
+    comment:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
   },
 ];
