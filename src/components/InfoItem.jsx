@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import { useState } from "react";
+import { SlideDown } from "react-slidedown";
+import "react-slidedown/lib/slidedown.css";
 
 const InfoItem = ({ infoItem, index }) => {
   const [activeId, setActiveId] = useState(null);
@@ -28,7 +30,20 @@ const InfoItem = ({ infoItem, index }) => {
             {infoItem.question}
           </div>
         </div>
+        <div
+          className={clsx(
+            "info-icon relative flex size-12 items-center justify-center rounded-full border-2 border-s2 shadow-400 transition-all duration-500 group-hover:border-s4",
+            active && "before:bg-p1 after:rotate-0 after:bg-p1",
+          )}
+        >
+          <div className="g4 size-11/12 rounded-full shadow-300" />
+        </div>
       </div>
+      <SlideDown>
+        {activeId === infoItem.id && (
+          <div className="body-3 px-7 py-3.5">{infoItem.answer}</div>
+        )}
+      </SlideDown>
     </div>
   );
 };
