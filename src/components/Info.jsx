@@ -30,6 +30,11 @@ const Info = () => {
               />
             </div>
             <div className="relative flex-1 pt-24">
+              {info.slice(0, halfLength).map((infoItem, index) => (
+                <InfoItem key={infoItem.id} infoItem={infoItem} index={index} />
+              ))}
+            </div>
+            <div className="relative flex-1 lg:pt-24">
               {info.slice(halfLength).map((infoItem, index) => (
                 <InfoItem
                   key={infoItem.id}
@@ -39,6 +44,7 @@ const Info = () => {
               ))}
             </div>
           </div>
+          <div className="info-line_after absolute left-[calc(50%-1px)] top-0 -z-1 h-full w-0.5 bg-s2 max-lg:hidden" />
         </div>
       </Element>
     </section>
