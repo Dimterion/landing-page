@@ -268,7 +268,7 @@
   }
 
   .download_tech-icon {
-    @apply relative z-2 flex size-full items-center justify-center transition-all duration-500;
+    @apply relative z-2 flex items-center justify-center transition-all duration-500;
   }
 
   .download_tech-icon_before {
