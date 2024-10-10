@@ -28,7 +28,7 @@ const TestimonialItem = ({ item, containerClassName }) => {
 };
 
 TestimonialItem.propTypes = {
-  item: PropTypes.string,
+  item: PropTypes.object,
   containerClassName: PropTypes.string,
 };
 

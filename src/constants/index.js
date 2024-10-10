@@ -13,6 +13,10 @@ import plan1 from "../assets/pricing/plan_1.png";
 import plan2 from "../assets/pricing/plan_2.png";
 import plan3 from "../assets/pricing/plan_3.png";
 import testimonialsImg from "../assets/testimonials/testimonials_img.png";
+import iosIcon from "../assets/download/ios_icon.svg";
+import androidIcon from "../assets/download/android_icon.svg";
+import windowsIcon from "../assets/download/windows_icon.svg";
+import webIcon from "../assets/download/web_icon.svg";
 
 export const features = [
   {
@@ -217,5 +221,32 @@ export const testimonials = [
     avatarUrl: testimonialsImg,
     comment:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eveniet incidunt minima facere fugiat ullam.",
+  },
+];
+
+export const links = [
+  {
+    id: "0",
+    title: "Ios",
+    icon: iosIcon,
+    url: "#",
+  },
+  {
+    id: "1",
+    title: "Android",
+    icon: androidIcon,
+    url: "#",
+  },
+  {
+    id: "2",
+    title: "Windows",
+    icon: windowsIcon,
+    url: "#",
+  },
+  {
+    id: "3",
+    title: "Web",
+    icon: webIcon,
+    url: "#",
   },
 ];
