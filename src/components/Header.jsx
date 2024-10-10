@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { Link as LinkScroll } from "react-scroll";
-import headerLogo from "../assets/header/header_logo.png";
+import logo from "../assets/general/logo.png";
 import menuBtn from "../assets/header/menu_btn.svg";
 import menuBtnClose from "../assets/header/menu_btn_close.svg";
 import bgOutlines from "../assets/general/bg_outlines.svg";
@@ -51,7 +51,7 @@ const Header = () => {
     >
       <div className="container flex h-14 items-center max-lg:px-5">
         <a className="z-2 flex-1 cursor-pointer lg:hidden">
-          <img src={headerLogo} width={115} height={55} alt="Header logo" />
+          <img src={logo} width={115} height={55} alt="Header logo" />
         </a>
         <div
           className={clsx(
@@ -77,12 +77,7 @@ const Header = () => {
                       "cursor-pointer transition-transform duration-500 max-lg:hidden",
                     )}
                   >
-                    <img
-                      src={headerLogo}
-                      width={160}
-                      height={55}
-                      alt="Header logo"
-                    />
+                    <img src={logo} width={160} height={55} alt="Header logo" />
                   </LinkScroll>
                 </li>
                 <li className="nav-li">
