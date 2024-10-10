@@ -3,6 +3,7 @@ import { links } from "../constants";
 import Marker from "./Marker";
 import logo from "../assets/general/logo.png";
 import lines from "../assets/download/lines.svg";
+import downloadImg from "../assets/download/download_img.jpg";
 
 const Download = () => {
   return (
@@ -55,6 +56,13 @@ const Download = () => {
                   <span className="download_preview-dot left-6 bg-p2" />
                   <span className="download_preview-dot left-11 bg-s3" />
                   <span className="download_preview-dot left-16 bg-p1/15" />
+                  <img
+                    src={downloadImg}
+                    width={855}
+                    height={655}
+                    alt="Download image"
+                    className="rounded-xl"
+                  />
                 </div>
               </div>
             </div>
