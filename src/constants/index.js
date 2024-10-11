@@ -250,3 +250,41 @@ export const links = [
     url: "#",
   },
 ];
+
+export const logos = [
+  {
+    id: "0",
+    title: "Lorem ipsum",
+    url: webIcon,
+    width: 50,
+    height: 50,
+  },
+  {
+    id: "1",
+    title: "Lorem ipsum",
+    url: webIcon,
+    width: 50,
+    height: 50,
+  },
+  {
+    id: "2",
+    title: "Lorem ipsum",
+    url: webIcon,
+    width: 50,
+    height: 50,
+  },
+  {
+    id: "3",
+    title: "Lorem ipsum",
+    url: webIcon,
+    width: 50,
+    height: 50,
+  },
+  {
+    id: "4",
+    title: "Lorem ipsum",
+    url: webIcon,
+    width: 50,
+    height: 50,
+  },
+];
