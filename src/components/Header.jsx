@@ -51,7 +51,7 @@ const Header = () => {
     >
       <div className="container flex h-14 items-center max-lg:px-5">
         <a className="z-2 flex-1 cursor-pointer lg:hidden">
-          <img src={logo} width={115} height={55} alt="Header logo" />
+          <img src={logo} width={60} height={50} alt="Header logo" />
         </a>
         <div
           className={clsx(
@@ -77,7 +77,7 @@ const Header = () => {
                       "cursor-pointer transition-transform duration-500 max-lg:hidden",
                     )}
                   >
-                    <img src={logo} width={160} height={55} alt="Header logo" />
+                    <img src={logo} width={60} height={55} alt="Header logo" />
                   </LinkScroll>
                 </li>
                 <li className="nav-li">

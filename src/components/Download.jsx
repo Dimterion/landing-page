@@ -69,8 +69,9 @@ const Download = () => {
           </div>
           <ul className="mt-24 flex justify-center max-lg:hidden">
             {logos.map(({ id, url, width, height, title }) => (
-              <li key={id} className="mx-10">
+              <li key={id} className="mx-10 flex flex-col items-center gap-4">
                 <img src={url} width={width} height={height} alt={title} />
+                <p>{title}</p>
               </li>
             ))}
           </ul>
