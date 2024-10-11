@@ -17,6 +17,10 @@ import iosIcon from "../assets/download/ios_icon.svg";
 import androidIcon from "../assets/download/android_icon.svg";
 import windowsIcon from "../assets/download/windows_icon.svg";
 import webIcon from "../assets/download/web_icon.svg";
+import x from "../assets/footer/x.svg";
+import threads from "../assets/footer/threads.svg";
+import instagram from "../assets/footer/instagram.svg";
+import discord from "../assets/footer/discord.svg";
 
 export const features = [
   {
@@ -286,5 +290,32 @@ export const logos = [
     url: webIcon,
     width: 50,
     height: 50,
+  },
+];
+
+export const socials = [
+  {
+    id: "0",
+    title: "X",
+    icon: x,
+    url: "#",
+  },
+  {
+    id: "1",
+    title: "Threads",
+    icon: threads,
+    url: "#",
+  },
+  {
+    id: "2",
+    title: "Instagram",
+    icon: instagram,
+    url: "#",
+  },
+  {
+    id: "3",
+    title: "Discord",
+    icon: discord,
+    url: "#",
   },
 ];
