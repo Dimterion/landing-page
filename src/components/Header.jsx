@@ -79,7 +79,12 @@ const Header = () => {
                       "cursor-pointer transition-transform duration-500 max-lg:hidden",
                     )}
                   >
-                    <img src={logo} width={60} height={55} alt="Header logo" />
+                    <img
+                      src={logo}
+                      width={50}
+                      height={50}
+                      alt="Header logo"
+                    />
                   </LinkScroll>
                 </li>
                 <li className="nav-li">
