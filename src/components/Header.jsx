@@ -27,6 +27,7 @@ const Header = () => {
   const NavLink = ({ title }) => (
     <LinkScroll
       onClick={() => setIsOpen(false)}
+      href={`#${title}`}
       to={title}
       offset={-100}
       spy
@@ -50,7 +51,7 @@ const Header = () => {
       )}
     >
       <div className="container flex h-14 items-center max-lg:px-5">
-        <a className="z-2 flex-1 cursor-pointer lg:hidden">
+        <a href="/" className="z-2 flex-1 cursor-pointer lg:hidden">
           <img src={logo} width={60} height={50} alt="Header logo" />
         </a>
         <div
@@ -70,6 +71,7 @@ const Header = () => {
                 <li className="nav-logo">
                   <LinkScroll
                     to="hero"
+                    href="#hero"
                     offset={-250}
                     spy
                     smooth

@@ -17,7 +17,7 @@ const Hero = () => {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius,
               aspernatur?
             </p>
-            <LinkScroll to="features" offset={-100} spy smooth>
+            <LinkScroll href="#features" to="features" offset={-100} spy smooth>
               <Button icon={heroBtn}>Lorem ipsum</Button>
             </LinkScroll>
           </div>
